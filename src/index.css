@@ -1,0 +1,34 @@
+html,
+body {
+  min-height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Urbanist", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.navbar {
+  background: white;
+  padding: 0.5rem 1rem;
+  z-index: 99;
+}
+.navbar-brand {
+  transition: 0.3s;
+  letter-spacing: 0.2rem;
+}
+.navbar-brand:hover {
+  transition: 0.1s;
+  color: #629a34;
+}
+.nav-link {
+  transition: 0.3s;
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+}
+.nav-link:hover {
+  transition: 0.1s;
+  color: #629a34;
+}
