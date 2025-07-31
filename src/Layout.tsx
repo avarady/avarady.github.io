@@ -1,13 +1,13 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 
 const Layout = () => {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <a className="navbar-brand" href="/">
+        <Link className="navbar-brand" to="/">
           Alexa Varady
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -23,19 +23,19 @@ const Layout = () => {
           <div className="w-100 d-flex justify-content-end">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link" href="/">
+                <Link className="nav-link" to="/">
                   Resume
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/projects">
+                <Link className="nav-link" to="/projects">
                   Projects
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/about">
+                <Link className="nav-link" to="/about">
                   About
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
