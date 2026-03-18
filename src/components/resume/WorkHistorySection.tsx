@@ -4,8 +4,12 @@ import "../../css/timeline.css";
 export interface IWorkItem {
   imageSrc?: string;
   link?: string;
+  company: string;
+  roles: IRole[];
+}
+
+export interface IRole {
   title: string;
-  subtitle: string;
   date: string;
   description?: string;
   listItems?: string[];
@@ -33,34 +37,42 @@ const WorkHistorySection = ({ content }: { content: IWorkItem[] }) => {
                 <div className="timeline-title">
                   {item.link ? (
                     <a href={item.link} target="_blank" rel="noreferrer">
-                      {item.title}
+                      {item.company}
                     </a>
                   ) : (
-                    item.title
+                    item.company
                   )}
-                </div>
-                <div className="d-flex flex-wrap justify-content-between w-100">
-                  <div className="timeline-subtitle">{item.subtitle}</div>
-                  <div className="timeline-date">{item.date}</div>
                 </div>
               </div>
             </div>
-            <div className="timeline-description mt-2">{item.description}</div>
-            <div className="timeline-list mt-2">
-              <ul>
-                {item.listItems &&
-                  item.listItems.map((listItem: string, listIndex: number) => {
-                    return (
-                      <li
-                        className="mt-2"
-                        key={"item-" + index + "-listItem-" + listIndex}
-                      >
-                        {listItem}
-                      </li>
-                    );
-                  })}
-              </ul>
-            </div>
+
+            {item.roles.map((item: IRole, index: number) => {
+              return (
+                <div>
+                  <div className="mt-2 d-flex flex-wrap justify-content-between w-100">
+                    <div className="timeline-subtitle">{item.title}</div>
+                    <div className="timeline-date">{item.date}</div>
+                  </div>
+                  <div className="timeline-description mt-2">{item.description}</div>
+                  <div className="timeline-list mt-2">
+                    <ul>
+                      {item.listItems &&
+                        item.listItems.map((listItem: string, listIndex: number) => {
+                          return (
+                            <li
+                              className="mt-2"
+                              key={"item-" + index + "-listItem-" + listIndex}
+                            >
+                              {listItem}
+                            </li>
+                          );
+                        })}
+                    </ul>
+                  </div>
+                </div>
+              );
+            })}
+
           </div>
         );
       })}
