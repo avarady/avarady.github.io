@@ -11,13 +11,12 @@ const About = () => {
         My favorite part of coding is backend and data manipulation - I could happily design relational databases and write complex SQL queries all day.
       </p>
       <p>
-        I did create this website myself using ReactJS + TypeScript. 
-        It is rather new and a work in progress that I have been updating regularly.
-        (There is no backend as the amount of data required is small, mostly static, and not expected to grow significantly.)
+        I did create this website myself using ReactJS + TypeScript.
+        There is no backend, as the amount of data required is small, mostly static, and not expected to grow significantly.
       </p>
       <p>
         Outside of work, my hobbies include video games and cosplay. 
-        My latest and favorite cosplays are two characters - Felis and Devil's Advocate - from Hunt: Showdown.
+        My favorite cosplays so far are two characters - Felis and Devil's Advocate - from a game called Hunt: Showdown.
         I enjoy the process of problem-solving that comes along with recreating a character's design.
       </p>
       <div className="d-flex gap-2">

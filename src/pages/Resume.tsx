@@ -15,13 +15,12 @@ const Resume = () => {
       <div className="column-wrapper">
         <div className="column">
           <ResumeCard title="Profile">
-            Experienced full-stack developer with 8+ years of expertise in a
+            Experienced full-stack developer with 10+ years of expertise in a
             wide array of languages and frameworks. Known for rapid delivery of
             high-quality, efficient code, emphasizing algorithm optimization and
-            robust error handling. Highly proficient in relational databases,
-            normalization, and advanced querying techniques. Quick learner,
-            passionate about innovative problem-solving and delivering top-tier
-            solutions.
+            robust error handling. Highly proficient in relational databases and
+            3rd-party integrations. Quick learner, passionate about innovative
+            problem-solving and delivering top-tier solutions.
           </ResumeCard>
           <ResumeCard title="Soft Skills">
             {/*<i>Click to expand</i>
