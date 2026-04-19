@@ -5,7 +5,7 @@ export const workHistory = [
     company: "Susco",
     roles: [
       {
-        title: "Senior Software Developer",
+        title: "Senior Software Engineer",
         date: "Jan 2026 - Present",
         listItems: [
         ],
