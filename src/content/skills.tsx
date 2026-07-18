@@ -6,23 +6,19 @@ export const softSkills = [
     inner: "",
   },
   {
-    title: "Time Management & Organization",
+    title: "Requirements Analysis & Technical Planning",
     inner: "",
   },
   {
-    title: "Attention to Detail",
+    title: "Professional / Stakeholder Communication",
     inner: "",
   },
   {
-    title: "Professional Communication",
+    title: "Ownership & Independent Execution",
     inner: "",
   },
   {
-    title: "Adaptability",
-    inner: "",
-  },
-  {
-    title: "Patience & Resourcefulness",
+    title: "Cross-Functional Collaboration",
     inner: "",
   },
 ];
@@ -33,47 +29,39 @@ export const hardSkills = [
     inner: (<>
       <h3>Experienced:</h3>
       <ul>
-        <li>Java</li>
+        <li>Angular</li>
         <li>C# / .NET</li>
-        <li>HTML + CSS / Bootstrap</li>
+        <li>JavaScript / jQuery</li>
+        <li>HTML / CSS / Bootstrap</li>
         <li>PHP / Laravel</li>
-        <li>Python</li>
         <li>Swift</li>
-        <li>
-          JS-Related:
-          <ul>
-            <li>AngularJS</li>
-            <li>JavaScript</li>
-            <li>jQuery</li>
-            <li>Node.js / Express.js</li>
-            <li>TypeScript</li>
-          </ul>
-        </li>
+        <li>TypeScript</li>
         <li>
           SQL:
           <ul>
-            <li>MS SQL Server / T-SQL</li>
-            <li>Oracle SQL</li>
+            <li>MS SQL Server</li>
             <li>PostgreSQL</li>
             <li>MySQL</li>
           </ul>
         </li>
       </ul>
-      <h3>Familiar / Limited Experience:</h3>
-      Limited proficiency or would require a refresher due to time elapsed since last used.
+      <h3>Familiar:</h3>
+      <p>
+        Working knowledge from prior experience; may require a refresher before regular use.
+      </p>
       <ul>
-        <li>.NET Framework</li>
         <li>Bash</li>
         <li>C++</li>
         <li>Django</li>
-        <li>Go</li>
         <li>GraphQL</li>
-        <li>Kotlin</li>
-        <li>.NET Core (UWP, Android, iOS)</li>
+        <li>Java</li>
+        <li>.NET Framework</li>
+        <li>Node.js / Express.js</li>
+        <li>Oracle SQL</li>
         <li>PowerShell</li>
-        <li>R</li>
+        <li>Python</li>
         <li>Racket / LISP</li>
-        <li>ReactJS / Preact</li>
+        <li>React / Preact</li>
         <li>SQLite</li>
         <li>Tailwind</li>
       </ul>
@@ -82,60 +70,57 @@ export const hardSkills = [
   {
     title: "Processes & Concepts",
     inner: (<ul>
-      <li>DevOps + CI/CD</li>
-      <li>Git / GitHub</li>
-      <li>Agile / Scrum</li>
-      <li>Code Reviews</li>
-      <li>REST API Development</li>
-      <li>Responsive Web Design</li>
-      <li>Software Development Life Cycle (SDLC)</li>
-      <li>Object-Oriented Programming (OOP)</li>
-      <li>Data Structures</li>
-      <li>Algorithm Design & Analysis</li>
+      <li>Requirements Analysis & Technical Specifications</li>
+      <li>Work Breakdown Structures & Development Estimation</li>
+      <li>System & Software Architecture</li>
+      <li>Performance Optimization</li>
       <li>Relational Database Design, Normalization, & Management</li>
-      <li>Information & Web Security</li>
-      <li>Logging & Debugging</li>
-      <li>Startups</li>
+      <li>DevOps & CI/CD</li>
+      <li>Agile / Scrum</li>
+      <li>REST API Development</li>
+      <li>Algorithm Design & Analysis</li>
     </ul>)
   },
   {
-    title: "Software, Tools, & OS",
+    title: "Architecture & Specialized Development",
     inner: (<ul>
+      <li>Integration Architecture</li>
+      <li>Multi-Tenant Systems</li>
+      <li>Single Sign-On & Tenant Switching</li>
+      <li>OAuth & JWT Authentication</li>
+      <li>AI-Assisted Workflows</li>
+      <li>iOS Application Development</li>
+      <li>LiDAR Scanning & 3D Data Transformation</li>
+      <li>Real-Time Applications & WebSockets</li>
+      <li>Automated Data Processing, Visualization, & Reporting</li>
+    </ul>)
+  },
+  {
+    title: "Platforms & Tools",
+    inner: (<ul>
+      <li>Azure Resource Management, Configuration, & Deployments</li>
+      <li>Bitbucket & Bitbucket Pipelines</li>
       <li>Visual Studio & VS Code</li>
-      <li>Eclipse</li>
       <li>Android Studio</li>
+      <li>Xcode</li>
       <li>Unity</li>
+      <li>Docker / Docker Compose</li>
       <li>Postman</li>
-      <li>SQL Server Management Studio (SSMS)</li>
-      <li>pgAdmin</li>
-      <li>MySQL Workbench</li>
-      <li>AWS S3</li>
-      <li>Azure Blob Storage</li>
-      <li>
-        Microsoft Office (Word, Excel, PowerPoint, OneNote, Teams)
-      </li>
-      <li>
-        Adobe CC (Photoshop, Illustrator, Lightroom, Animate, Acrobat)
-      </li>
-      <li>Autodesk Maya & Blender</li>
-      <li>Windows, Linux, & MacOS</li>
+      <li>Git / GitHub</li>
     </ul>)
   },
   {
-    title: "API Integrations",
+    title: "APIs & External Platforms",
     inner: (<ul>
+      <li>Apple RoomPlan</li>
       <li>ArcGIS / Esri / Survey123</li>
       <li>Google Maps</li>
-      <li>MailChimp</li>
       <li>Microsoft Graph</li>
       <li>OpenAI</li>
-      <li>PayPal</li>
-      <li>Pusher (WebSockets)</li>
       <li>Stripe</li>
       <li>Twilio</li>
       <li>Twitch</li>
       <li>Verisk / Xactimate</li>
-      <li>WordPress</li>
     </ul>)
   }
 ];

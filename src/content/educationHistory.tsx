@@ -6,7 +6,7 @@ export const educationHistory = [
     subtitle: "Graduate Studies, Computer Science",
     date: "2018 - 2021",
     description:
-      "Engaged in rigorous coursework pursuing a Master's degree in Computer Science with a specialization in Interactive Intelligence. Opted to diverge from the program to capitalize on emerging career opportunities.",
+      "Completed graduate-level coursework toward a Master’s degree in Computer Science, specializing in Interactive Intelligence, before leaving the program to pursue a professional opportunity.",
     gpa: 3.8,
     suffix: "gt",
     courses: [

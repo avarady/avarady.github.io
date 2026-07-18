@@ -15,11 +15,80 @@ export interface IProjectItem {
 
 export const projects = [
   {
-    title: "Game Website",
+    title: "Livestream Event Platform",
+    images: [
+      {
+        src: "/images/livestream-platform/dashboard.png",
+        text:
+          "Dashboard for creating and managing interactive audience games, participants, prompts, and event settings.",
+      },
+      {
+        src: "/images/livestream-platform/player.png",
+        text:
+          "Participant view with a dynamically generated game card and real-time updates as prompts are called.",
+      },
+      {
+        src: "/images/livestream-platform/moderation.png",
+        text:
+          "Moderation tools for reviewing participant activity, validating results, and managing active sessions.",
+      },
+      {
+        src: "/images/livestream-platform/templates.png",
+        text:
+          "Reusable prompt templates that can be searched, previewed, and copied into new or existing events.",
+      },
+      {
+        src: "/images/livestream-platform/token-store.png",
+        text:
+          "Integrated purchasing workflow that allows hosts to increase participant capacity for individual events.",
+      },
+    ],
+    skills: {
+      front: ["Angular", "TypeScript", "HTML", "SCSS", "Bootstrap"],
+      back: ["PHP", "Laravel", "REST API", "PostgreSQL"],
+      other: ["WebSockets", "Twitch API", "Stripe API"],
+    },
+    description:
+      "Independently developed a full-stack platform that allows livestream hosts to create and run interactive audience games. The application includes real-time participation, configurable game settings, moderation tools, account integrations, payment processing, and administrative workflows. The project name and identifying details have been withheld for privacy.",
+    achievements: [
+      {
+        title: "Full-Stack Product Development",
+        description:
+          "Designed and developed the application across the frontend, backend, database, authentication, deployment, and real-time communication layers.",
+      },
+      {
+        title: "Real-Time Event Architecture",
+        description:
+          "Implemented presence channels and WebSocket-based updates to synchronize game activity across participant, moderator, and host views.",
+      },
+      {
+        title: "Authentication & Platform Integration",
+        description:
+          "Integrated third-party authentication and channel APIs to support account linking, permissions, audience restrictions, and role-based access.",
+      },
+      {
+        title: "Payments & Capacity Management",
+        description:
+          "Developed Stripe-based purchasing workflows and a token system that allows hosts to increase participant capacity for individual events.",
+      },
+      {
+        title: "Administrative & Moderation Workflows",
+        description:
+          "Built tools for participant management, invitations, result validation, configurable permissions, and lifecycle-based restrictions.",
+      },
+      {
+        title: "Deployment & Infrastructure",
+        description:
+          "Containerized the development environment and configured separate application, database, real-time, and frontend deployment workflows.",
+      },
+    ],
+  },
+  {
+    title: "Gaming Platform",
     images: [
       {
         src: "/images/game/geoguesser.jpg",
-        text: 'Users can play a Geoguesser game to guess locations in maps from the video game "Hunt: Showdown".',
+        text: "Users can play a location-guessing game based on maps from a multiplayer video game.",
       },
       {
         src: "/images/game/geoguesser2.jpg",
@@ -52,32 +121,32 @@ export const projects = [
       other: ["AWS S3", "WebSockets", "Twitch API", "PayPal API"],
     },
     description:
-      'This website was created to complement the video game "Hunt: Showdown". It features interactive tools to allow streamers to engage with their audience during live broadcasts. Official name of website withheld for privacy reasons due to association with gaming username.',
+      'Developed a collection of interactive tools for players and livestream audiences centered on the video game "Hunt: Showdown." Features include multiplayer location-guessing games, livestream integrations, player statistics, loadout generation, and configurable audience bingo games. The project name is withheld because it is associated with a personal gaming identity.',
     achievements: [
       {
-        title: "Comprehensive Feature Development",
+        title: "Full-Stack Development",
         description:
-          "Independently designed and implemented frontend, backend, and Twitch extension components.",
+          "Independently developed the website, API, database functionality, and Twitch extension.",
       },
       {
         title: "Twitch Integration",
         description:
-          "Implemented Twitch account connectivity via Twitch API, which will automatically configure the Twitch extension on the user's channel to synchronize with their active Geoguesser session.",
+          "Connected user Twitch accounts and automated extension configuration so livestream sessions could synchronize with the website.",
       },
       {
-        title: "WebSockets",
+        title: "Real-Time Updates",
         description:
-          "Engineered websocket functionality to facilitate real-time updates of information during gameplay.",
+          "Implemented WebSocket communication to keep participants and livestream viewers synchronized during active games.",
       },
       {
-        title: "File Processing",
+        title: "CSV Import",
         description:
-          "Developed functionality enabling CSV files to be uploaded, parsed, and imported into bingo game prompts.",
+          "Built CSV upload and validation workflows for importing configurable game prompts.",
       },
     ],
   },
   {
-    title: "Bounds",
+    title: "Property Data",
     images: [
       {
         src: "/images/bounds/search.jpg",
@@ -85,7 +154,7 @@ export const projects = [
       },
       {
         src: "/images/bounds/crophistory.jpg",
-        text: "Each parcel's crop history can be seen. Values are pulled from DB and displayed in chart form. Created chart components to be used throughout the site.",
+        text: "Each parcel's historical land-use data can be seen. Values are pulled from DB and displayed in chart form. Created chart components to be used throughout the site.",
       },
       {
         src: "/images/bounds/yield.jpg",
@@ -93,7 +162,7 @@ export const projects = [
       },
       {
         src: "/images/bounds/ucc.jpg",
-        text: "UCC search table. Joins 6 tables, collapsing 1:N relationships into JSON to be displayed in a single row. Files are PDFs served through an API call for security rather than being directly accessed from storage server. Personally implemented all necessary functionality both front and back end.",
+        text: "Built a searchable secured financial filings table backed by a query joining six tables and consolidating one-to-many records into structured JSON. Secured associated PDF files behind authenticated API endpoints.",
       },
       {
         src: "/images/bounds/mra.jpg",
@@ -110,27 +179,27 @@ export const projects = [
       other: ["ArcGIS", "Powershell"],
     },
     description:
-      "Bounds is a website for accessing information on parcels of land within the state of Kansas. It provides data on landowners, tax history, crop yields, and more. In early development.",
+      "Developed features for a land-data platform that provides searchable parcel, ownership, tax, mortgage, and agricultural information for properties across Kansas.",
     achievements: [
       {
         title: "Performance Optimization",
         description:
-          "Improved SQL queries and API algorithms, achieving up to 75% faster speed and responsiveness.",
+          "Optimized SQL queries and API processing, reducing response times by as much as 75%.",
       },
       {
-        title: "Automated Data Processing",
+        title: "Automated Data Imports",
         description:
-          "Engineered PowerShell scripts to automate the retrieval of tab-delimited text files from an FTP server, parsing, data insertion into databases, operation logging, and deletion of obsolete files.",
+          "Created PowerShell workflows to retrieve source files from an FTP server, validate and import records, log results, and remove obsolete files.",
       },
       {
-        title: "Data Dashboard Development",
+        title: "Analytics Dashboards",
         description:
-          "Designed a comprehensive data dashboard featuring filtering and search capabilities, enabling users to analyze metrics such as mortgages, farmable acreage, and comparative data across different periods.",
+          "Built searchable and filterable dashboards for analyzing mortgage activity, farmable acreage, historical land-use data, and changes across reporting periods.",
       },
     ],
   },
   {
-    title: "LogoLounge",
+    title: "Design Community",
     images: [
       {
         src: "/images/logolounge/main.jpg",
@@ -154,7 +223,7 @@ export const projects = [
       },
       {
         src: "/images/logolounge/awards.jpg",
-        text: "Awards tab on profile page. Award badges are dynamically added to logos that have been featured in a book. Wrote query for user awards.",
+        text: "Awards tab on profile page. Award badges are dynamically added to logos that have been selected for external recognition. Wrote query for user awards.",
       },
       {
         src: "/images/logolounge/checkout.jpg",
@@ -167,42 +236,32 @@ export const projects = [
       other: ["OpenAI API", "Azure Blob Storage", "PayPal API", "MailChimp API", "WordPress API"],
     },
     description:
-      "LogoLounge is a social media platform for graphic designers specializing in logos. It allows users to submit, comment on, like, save, and follow other designers' work. This new site is currently in development and will replace the existing production site upon completion.",
+      "Contributed full-stack features to a professional community and portfolio platform for creative professionals. Users can publish work, follow designers, interact with submissions, organize saved logos, and manage paid memberships.",
     achievements: [
       {
-        title: "AI Integration",
+        title: "AI-Assisted Content",
         description:
-          "Implemented AI-generated suggestions for logo descriptions and tags using the OpenAI API.",
+          "Integrated the OpenAI API to generate suggested descriptions and searchable tags for uploaded logos.",
       },
       {
-        title: "Payment System Development",
+        title: "Membership & Payment Workflows",
         description:
-          "Developed payment flow and processing, including coupons, gift cards, and subscription services, utilizing the PayPal API for secure transactions.",
+          "Developed PayPal-based membership payments, renewal workflows, coupons, and gift-card generation and redemption.",
       },
       {
-        title: "WordPress Integration",
+        title: "User Engagement Features",
         description:
-          "Integrated the WordPress API to dynamically embed news items from the company's blog site.",
-      },
-      {
-        title: "Cloud Storage Integration",
-        description:
-          "Integrated Azure blob storage for uploading and retrieval of logo and avatar images.",
-      },
-      {
-        title: "Comprehensive Feature Development",
-        description:
-          "Designed and implemented both back-end and front-end features for user interactions, including following users, tracking logo views, searching logos, liking and commenting on logos, and saving logos to collections.",
+          "Implemented frontend and backend functionality for follows, views, likes, comments, search, and saved-logo collections.",
       },
       {
         title: "Performance Optimization",
         description:
-          "Optimized SQL queries and API algorithms, boosting speed and responsiveness by up to 50%.",
+          "Improved database queries and API processing, reducing response times by as much as 50%.",
       },
     ],
   },
   {
-    title: "PK / intelliSPEC",
+    title: "Asset Management",
     images: [
       {
         src: "/images/pk/modelviewer2.jpg",
@@ -247,31 +306,31 @@ export const projects = [
       other: ["Autodesk"],
     },
     description:
-      "intelliSPEC is a comprehensive suite of web and mobile software used to streamline business operations, especially for those that use complex equipment. It can load a 3D model of the facility and display details about anomalies, tasks, components of items, documents, and more. Information can be synced with a mobile application to allow employees to complete tasks and submit forms and anomalies while in the facility.",
+      "Contributed to a web and mobile operations platform used to manage facilities, equipment, tasks, forms, documents, and operational issues. The system includes interactive 3D facility models and offline mobile synchronization.",
     achievements: [
       {
-        title: "Comprehensive Feature Development",
+        title: "Full-Stack Feature Development",
         description:
-          "Designed and implemented both back-end and front-end features for user interactions, including the anomaly tracking and form submission processes.",
+          "Developed frontend and backend workflows for anomaly tracking, task management, form completion, and document access.",
       },
       {
-        title: "Autodesk Integration",
+        title: "Interactive 3D Integration",
         description:
-          "Implemented exchange of information between application and embedded Autodesk 3D model viewer, facilitating dynamic highlighting of selected items and associated anomalies in distinct colors.",
+          "Connected the application with an embedded Autodesk model viewer, allowing selections and anomaly data to remain synchronized between the model and surrounding interface.",
       },
       {
-        title: "Mobile Application Development",
+        title: "Offline Mobile Workflows",
         description:
-          "Project included a mobile application designed to synchronize all information for offline use, including forms that sync back to the main server once online.",
+          "Contributed to mobile functionality that synchronized operational data for offline use and uploaded completed forms when connectivity was restored.",
       },
     ],
   },
   {
-    title: "ButterMove",
+    title: "Service Platform",
     images: [
       {
         src: "/images/buttermove/main.jpg",
-        text: "Main page of ButterMove site.",
+        text: "Main page.",
       },
       {
         src: "/images/buttermove/map.jpg",
@@ -315,28 +374,28 @@ export const projects = [
       back: ["Go", "GraphQL"],
       other: ["Stripe API", "Twilio API", "Google Maps API"],
     },
-    description:
-      'Buttermove is a comprehensive platform that connects movers with moving companies. It features booking, customer feedback, and a unique "ButterScore" reflecting mover trustworthiness.',
+    description: 
+      "Contributed full-stack features to a platform that helps moving companies manage customer inquiries, estimates, payments, onboarding, scheduling, and business performance.",
     achievements: [
       {
         title: "Payment Processing",
         description:
-          "Implemented payment holds and processing using the Stripe API.",
+          "Implemented Stripe workflows for payment authorization, capture, additional charges, and refunds.",
       },
       {
-        title: "User Account Registration",
+        title: "Secure Account Registration",
         description:
-          "Developed a secure registration system with two-factor authentication (2FA) utilizing the Twilio API.",
+          "Developed account-registration and two-factor authentication workflows using the Twilio API.",
       },
       {
-        title: "Data Dashboards",
+        title: "Operational Dashboards",
         description:
-          "Created detailed data dashboards for ButterMove administrators, featuring extensive statistics, calculations, graphs, and filtering options.",
+          "Built dashboards with business metrics, forecasting calculations, charts, filtering, and onboarding status tracking.",
       },
       {
-        title: "Google Maps Integration",
+        title: "Location Services",
         description:
-          "Integrated the Google Maps API for address autocompletion and seamless display of move information within the platform.",
+          "Integrated Google Maps for address autocomplete, geographic searches, and map-based presentation of move details.",
       },
     ],
   },

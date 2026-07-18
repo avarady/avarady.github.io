@@ -14,6 +14,12 @@ export const workHistory = [
         title: "Intermediate Software Developer",
         date: "Aug 2024 - Jan 2026",
         listItems: [
+          "Analyzed business and technical requirements and translated them into technical specifications, work breakdown structures, and development estimates.",
+          "Designed and implemented secure authentication handshakes between a centralized SSO catalog and individual tenant applications, enabling seamless tenant switching.",
+          "Built a LiDAR-based room-scanning feature for insurance adjusters using Apple RoomPlan, including custom 3D transformations to clean, normalize, and convert scan data for import into a third-party application.",
+          "Developed an AI-assisted claim-intake system that reads adjusters’ emails and attachments, extracts relevant information, and automatically creates claims.",
+          "Integrated an AI-powered voice assistant into a mobile application to help users complete tasks and access information through natural-language interactions.",
+          "Created a forecasting algorithm that used historical data to estimate tree-removal duration and recommend required equipment.",
         ],
       }
     ]
@@ -27,10 +33,11 @@ export const workHistory = [
         title: "Software Developer",
         date: "Nov 2021 - Aug 2024",
         listItems: [
-          "Developed and customized large-scale, customer-facing web and mobile applications according to client specifications, including e-commerce and payment processing systems.",
-          "Engaged in full stack development across a variety of languages and frameworks tailored to each project's requirements, using Agile/Scrum methodologies.",
-          "Optimized API and database queries, increasing speed and responsiveness by up to 75%.",
-          "Engineered data dashboards for clients to easily track service sign-ups and key metrics, enhancing decision-making.",
+          "Built and customized large customer-facing web and mobile applications based on client requirements, including e-commerce platforms and payment processing systems.",
+          "Worked across frontend and backend technologies, selecting languages and frameworks based on the needs of each project.",
+          "Improved API and database performance by optimizing queries and application logic, reducing response times by as much as 75%.",
+          "Engineered data dashboards that allowed clients to track service sign-ups, usage, and other key business metrics.",
+          "Collaborated with project teams using Agile and Scrum development practices.",
         ],
       }
     ]
@@ -44,11 +51,13 @@ export const workHistory = [
         title: "Software Developer, Teacher, Registrar",
         date: "Aug 2016 - Apr 2022",
         listItems: [
-          "Customized the PowerSchool SIS platform front- and back-end functionalities, using AngularJS and Oracle SQL to automate and digitize numerous manual processes, streamlining operations and maximizing efficiency.",
-          "Singlehandedly created and maintained multiple web applications tailored to specific requirements, using HTML, CSS, PHP, JavaScript, and MySQL to deliver customized solutions.",
+          "Customized the frontend and backend of the PowerSchool student information system using AngularJS and Oracle SQL.",
+          "Automated and digitized manual administrative processes, reducing repetitive work and improving day-to-day operations.",
+          "Independently designed, built, and maintained several internal web applications using HTML, CSS, PHP, JavaScript, and MySQL.",
           "Maintained student and school records both digitally and physically. Managed large-scale data operations, including writing scripts to import, export, and reconcile data from multiple sources.",
-          "Crafted and executed complex data analysis queries using Oracle SQL, facilitating insightful reporting and informed decision-making processes.",
-          "Created curriculum for and taught courses in Python, Java, 2D and 3D/VR Game Development (Unity + C#), Database Systems (MySQL), and Networks + Security. Additionally coached the FIRST Tech Challenge robotics team.",
+          "Wrote complex Oracle SQL queries for reporting, data analysis, and operational decision-making.",
+          "Created curriculum for and taught courses in Python, Java, 2D and 3D/VR Game Development (Unity + C#), Database Systems (MySQL), and Networks + Security.",
+          "Coached the FIRST Tech Challenge robotics team.",
         ],
       }
     ]
@@ -60,13 +69,12 @@ export const workHistory = [
       {
         title: "President",
         date: "Aug 2014 - May 2016",
-        description:
-          "Co-founded Team 4th Dimension, a start-up specializing in the development of web and mobile application solutions.",
         listItems: [
-          "Managed financial operations and accounts.",
-          "Crafted essential legal documentation.",
-          "Supervised personnel and led team efforts.",
-          "Actively contributed to the ideation, development, and execution of innovative applications.",
+          "Co-founded a startup focused on developing web and mobile applications for clients and original product ideas.",
+          "Managed company finances, accounts, and administrative operations.",
+          "Prepared business and legal documentation.",
+          "Supervised team members and coordinated development efforts.",
+          "Contributed directly to product strategy, technical development, and project execution.",
         ],
       }
     ]
