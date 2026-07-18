@@ -27,11 +27,10 @@ const Resume = () => {
             <AccordionGroup content={softSkills} suffix="soft" />*/}
             <ul>
               <li>Problem Solving & Critical Thinking</li>
-              <li>Time Management & Organization</li>
-              <li>Attention to Detail</li>
-              <li>Professional Communication</li>
-              <li>Adaptability</li>
-              <li>Patience & Resourcefulness</li>
+              <li>Requirements Analysis & Technical Planning</li>
+              <li>Professional / Stakeholder Communication</li>
+              <li>Ownership & Independent Execution</li>
+              <li>Cross-Functional Collaboration</li>
             </ul>
           </ResumeCard>
           <ResumeCard title="Hard Skills">

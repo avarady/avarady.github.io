@@ -8,34 +8,87 @@ const ProjectDetailModal = ({
 }: {
   content: IProjectItem | null | undefined;
 }) => {
-  return content ? (
+  if (!content) {
+    return null;
+  }
+
+  const showGallery =
+    content.detailDisplay !== "text" && Boolean(content.images?.length);
+
+  return (
     <div className="h-100 overflow-y-scroll pb-5">
+      {content.previewImage && (
+        <div className="detail-preview mt-4">
+          <img
+            src={content.previewImage.src}
+            alt={
+              content.previewImage.text ||
+              `${content.title} preview`
+            }
+          />
+        </div>
+      )}
+
       <div className="mt-4 detail-header">Overview</div>
-      <div className="mt-2 detail-inner">{content.description}</div>
+      <div className="mt-2 detail-inner">
+        {content.description}
+      </div>
+
       <div className="mt-4 detail-header">Skills Used</div>
       <div className="detail-skills mt-2 detail-inner d-flex flex-wrap gap-2 align-items-center justify-content-center">
         {content.skills.front?.map((skill) => (
-          <span className="skill-bubble skill-bubble-front">{skill}</span>
+          <span
+            key={`front-${skill}`}
+            className="skill-bubble skill-bubble-front"
+          >
+            {skill}
+          </span>
         ))}
+
         {content.skills.back?.map((skill) => (
-          <span className="skill-bubble skill-bubble-back">{skill}</span>
+          <span
+            key={`back-${skill}`}
+            className="skill-bubble skill-bubble-back"
+          >
+            {skill}
+          </span>
         ))}
+
         {content.skills.other?.map((skill) => (
-          <span className="skill-bubble skill-bubble-other">{skill}</span>
+          <span
+            key={`other-${skill}`}
+            className="skill-bubble skill-bubble-other"
+          >
+            {skill}
+          </span>
         ))}
       </div>
-      <div className="mt-4 gallery">
-        <EmblaCarousel slides={content.images} />
+
+      {showGallery && (
+        <div className="mt-4 gallery">
+          <EmblaCarousel slides={content.images ?? []} />
+        </div>
+      )}
+
+      <div className="mt-4 mb-2 detail-header">
+        Personal Achievements
       </div>
-      <div className="mt-4 mb-2 detail-header">Personal Achievements</div>
+
       {content.achievements.map((item) => (
-        <div className="achievement-item detail-inner">
-          <div className="achievement-title">{item.title}</div>
-          <div className="mt-2">{item.description}</div>
+        <div
+          key={item.title}
+          className="achievement-item detail-inner"
+        >
+          <div className="achievement-title">
+            {item.title}
+          </div>
+          <div className="mt-2">
+            {item.description}
+          </div>
         </div>
       ))}
     </div>
-  ) : null;
+  );
 };
 
 export default ProjectDetailModal;

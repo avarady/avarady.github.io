@@ -1,6 +1,14 @@
 export interface IProjectItem {
   title: string;
-  images: { src: string; text: string }[];
+  previewImage?: {
+    src: string;
+    text: string;
+  };
+  images?: {
+    src: string;
+    text: string;
+  }[];
+  detailDisplay?: "gallery" | "text";
   skills: {
     front?: string[];
     back?: string[];
@@ -12,8 +20,7 @@ export interface IProjectItem {
     description: string;
   }[];
 }
-
-export const projects = [
+export const projects : IProjectItem[] = [
   {
     title: "Livestream Event Platform",
     images: [
@@ -49,7 +56,7 @@ export const projects = [
       other: ["WebSockets", "Twitch API", "Stripe API"],
     },
     description:
-      "Independently developed a full-stack platform that allows livestream hosts to create and run interactive audience games. The application includes real-time participation, configurable game settings, moderation tools, account integrations, payment processing, and administrative workflows. The project name and identifying details have been withheld for privacy.",
+      "Independently developed a full-stack platform that allows livestream hosts to create and run interactive audience games. The application includes real-time participation, configurable game settings, moderation tools, account integrations, payment processing, and administrative workflows. The project name and identifying details have been withheld for privacy. This was a spinoff of the \"Gaming Platform\" project, made game-agnostic, with additional features and continuing updates.",
     achievements: [
       {
         title: "Full-Stack Product Development",
@@ -80,6 +87,139 @@ export const projects = [
         title: "Deployment & Infrastructure",
         description:
           "Containerized the development environment and configured separate application, database, real-time, and frontend deployment workflows.",
+      },
+    ],
+  },
+  {
+    title: "Claim Management",
+    previewImage: {
+      src: "/images/claims-platform/preview.png",
+      text: "Insurance claim management platform",
+    },
+    detailDisplay: "text",
+    skills: {
+      front: ["HTMX", "jQuery", "Kendo", "Swift", "iOS"],
+      back: ["C# / .NET", "REST API", "MS SQL"],
+      other: [
+        "Apple RoomPlan",
+        "LiDAR",
+        "3D Data Transformation",
+        "OpenAI API",
+        "Verisk API",
+        "Multi-Tenant Architecture",
+        "SSO",
+      ],
+    },
+    description:
+      "Contributed to a configurable multi-tenant claim management platform used by adjusting firms. My work included web, backend, and native iOS development, with a focus on field workflows, automation, 3D scanning, and insurance-system integrations.",
+    achievements: [
+      {
+        title: "Native iOS Development",
+        description:
+          "Independently designed and developed the iOS application, including its architecture, interface, API integrations, testing, and release support.",
+      },
+      {
+        title: "LiDAR Room Scanning",
+        description:
+          "Built an Apple RoomPlan workflow and custom 3D transformations to clean, normalize, and convert room scans for import into an external estimating application.",
+      },
+      {
+        title: "AI-Assisted Workflows",
+        description:
+          "Developed automated claim intake from emails and attachments and integrated a natural-language voice assistant into the mobile application.",
+      },
+      {
+        title: "External Integrations",
+        description:
+          "Implemented integrations with insurance-industry platforms and delivered additional full-stack features supporting claim and field workflows.",
+      },
+    ],
+  },
+  {
+    title: "Field Operations",
+    previewImage: {
+      src: "/images/field-operations/preview.png",
+      text: "Field service estimating and claim management software",
+    },
+    detailDisplay: "text",
+    skills: {
+      front: ["Angular", "TypeScript", "HTML", "CSS"],
+      back: ["PHP", "Laravel", "REST API", "MySQL"],
+      other: [
+        "Statistical Analysis",
+        "Predictive Modeling",
+        "Twilio API",
+        "SMS",
+        "Voice Calling",
+        "Workflow Automation",
+      ],
+    },
+    description:
+      "Developed software supporting tree-removal and insurance-claim operations, including a job requirement estimator and features for an internal claim management platform used by office staff and field crews.",
+    achievements: [
+      {
+        title: "Service Estimator",
+        description:
+          "Created a forecasting algorithm that uses historical job data to estimate completion time and recommend required equipment.",
+      },
+      {
+        title: "Crew Workflows",
+        description:
+          "Developed internal workflows that allow crews to review assignments, record time, and enter job and completion details.",
+      },
+      {
+        title: "Automated Communications",
+        description:
+          "Integrated automated voice calls and SMS messaging to support customer outreach and operational notifications.",
+      },
+      {
+        title: "Claim Management",
+        description:
+          "Contributed additional features and workflow improvements to an internal application used to coordinate claims and field operations.",
+      },
+    ],
+  },
+  {
+    title: "Damage Assessment",
+    previewImage: {
+      src: "/images/damage-assessment/preview.png",
+      text: "Property damage assessment and estimation system",
+    },
+    detailDisplay: "text",
+    skills: {
+      front: ["Angular", "TypeScript", "HTML", "CSS"],
+      back: ["C# / .NET", "REST API", "SQL"],
+      other: [
+        "ArcGIS",
+        "Survey123",
+        "Webhooks",
+        "Geospatial Data",
+        "Workflow Automation",
+        "Reporting",
+      ],
+    },
+    description:
+      "Developed a property assessment system used to track structures, inspections, and estimated damage following major events. The application calculates damage values and percentages and enriches submitted assessments with data from configurable geospatial layers.",
+    achievements: [
+      {
+        title: "Assessment Processing",
+        description:
+          "Built workflows for creating and managing properties and assessments, including calculations for estimated damage amounts and percentage of value damaged.",
+      },
+      {
+        title: "Survey Integration",
+        description:
+          "Implemented a webhook integration that receives submitted field assessments and automatically creates the corresponding property and assessment records.",
+      },
+      {
+        title: "Geospatial Data Integration",
+        description:
+          "Integrated ArcGIS services to retrieve supplemental property information from configurable layers, including ownership, flood-zone, and other location-based data.",
+      },
+      {
+        title: "Configurable Workflows",
+        description:
+          "Supported varying assessment requirements by allowing additional fields and external data sources to be configured for different deployments.",
       },
     ],
   },
@@ -149,27 +289,27 @@ export const projects = [
     title: "Property Data",
     images: [
       {
-        src: "/images/bounds/search.jpg",
+        src: "/images/property-data/search.jpg",
         text: "Map uses Esri / ArcGIS. All parcels searchable by owner and/or location. Dropdowns offer suggestions as you type.",
       },
       {
-        src: "/images/bounds/crophistory.jpg",
+        src: "/images/property-data/crophistory.jpg",
         text: "Each parcel's historical land-use data can be seen. Values are pulled from DB and displayed in chart form. Created chart components to be used throughout the site.",
       },
       {
-        src: "/images/bounds/yield.jpg",
+        src: "/images/property-data/yield.jpg",
         text: "Each parcel's yield can be seen. Values are pulled from DB and percent change is calculated.",
       },
       {
-        src: "/images/bounds/ucc.jpg",
+        src: "/images/property-data/ucc.jpg",
         text: "Built a searchable secured financial filings table backed by a query joining six tables and consolidating one-to-many records into structured JSON. Secured associated PDF files behind authenticated API endpoints.",
       },
       {
-        src: "/images/bounds/mra.jpg",
+        src: "/images/property-data/mra.jpg",
         text: "Mortgage rate analysis table. Estimates interest rate based on historical values if actual value is not stored in DB. Optimized query and load time.",
       },
       {
-        src: "/images/bounds/financialoverview.jpg",
+        src: "/images/property-data/financialoverview.jpg",
         text: "Financial overview dashboard. Several values involve complicated SQL queries to calculate. Optimized query and load time.",
       },
     ],
@@ -202,31 +342,31 @@ export const projects = [
     title: "Design Community",
     images: [
       {
-        src: "/images/logolounge/main.jpg",
+        src: "/images/design-community/main.jpg",
         text: "",
       },
       {
-        src: "/images/logolounge/home.jpg",
+        src: "/images/design-community/home.jpg",
         text: '"Fresh" page displaying most recently submitted logos. User can hover over logo to like or save directly, or click on logo to view detail modal. Implemented like and save functionality both front and back end.',
       },
       {
-        src: "/images/logolounge/logodetail.jpg",
+        src: "/images/design-community/logodetail.jpg",
         text: "Logo detail modal. User can view details, like / save, and comment. Related logos pulled based on similar tags. Implemented comment functionality front and back end, as well as related logos query.",
       },
       {
-        src: "/images/logolounge/collection.jpg",
+        src: "/images/design-community/collection.jpg",
         text: "Logo save modal. Can be saved to and removed from multiple collections. Implemented all logic and functionality for collections.",
       },
       {
-        src: "/images/logolounge/news.jpg",
+        src: "/images/design-community/news.jpg",
         text: "News page. Uses Wordpress API to pull articles from the organization's Wordpress blog site. Implemented all functionality for this page.",
       },
       {
-        src: "/images/logolounge/awards.jpg",
+        src: "/images/design-community/awards.jpg",
         text: "Awards tab on profile page. Award badges are dynamically added to logos that have been selected for external recognition. Wrote query for user awards.",
       },
       {
-        src: "/images/logolounge/checkout.jpg",
+        src: "/images/design-community/checkout.jpg",
         text: "Checkout / renewal screen. Membership can be paid via PayPal, credit card, or gift card code. Implemented payment endpoints in API, PayPal connection, and gift card generation, verification, and tracking.",
       },
     ],
@@ -264,39 +404,39 @@ export const projects = [
     title: "Asset Management",
     images: [
       {
-        src: "/images/pk/modelviewer2.jpg",
+        src: "/images/asset-management/modelviewer2.jpg",
         text: "3D model viewer using Autodesk. Implemented interactability between outer website and embedded component.",
       },
       {
-        src: "/images/pk/modelviewer.jpg",
+        src: "/images/asset-management/modelviewer.jpg",
         text: "Item detail. Wrote queries to pull and link to related information in right side panel.",
       },
       {
-        src: "/images/pk/hierarchy.jpg",
+        src: "/images/asset-management/hierarchy.jpg",
         text: "Item list. Added several columns.",
       },
       {
-        src: "/images/pk/components.jpg",
+        src: "/images/asset-management/components.jpg",
         text: "Component list, similar to item list.",
       },
       {
-        src: "/images/pk/dashboard.jpg",
+        src: "/images/asset-management/dashboard.jpg",
         text: "Dashboard showing facilities for organization.",
       },
       {
-        src: "/images/pk/formedit.jpg",
+        src: "/images/asset-management/formedit.jpg",
         text: "Form editor. Added Anomaly Closeout item.",
       },
       {
-        src: "/images/pk/formdetail.jpg",
+        src: "/images/asset-management/formdetail.jpg",
         text: "Anomaly Closeout form item settings.",
       },
       {
-        src: "/images/pk/tasks.jpg",
+        src: "/images/asset-management/tasks.jpg",
         text: "Tasks for user.",
       },
       {
-        src: "/images/pk/task.jpg",
+        src: "/images/asset-management/task.jpg",
         text: "Task detail. Implemented display of associated forms and documents.",
       },
     ],
@@ -329,44 +469,44 @@ export const projects = [
     title: "Service Platform",
     images: [
       {
-        src: "/images/buttermove/main.jpg",
+        src: "/images/service-platform/main.jpg",
         text: "Main page.",
       },
       {
-        src: "/images/buttermove/map.jpg",
+        src: "/images/service-platform/map.jpg",
         text: "Users can search movers by location and view on map.",
       },
       {
-        src: "/images/buttermove/butterpay.jpg",
+        src: "/images/service-platform/butterpay.jpg",
         text: "Mover account checklist. Implemented checklist functionality and several items on the checklist to be seen in detail later.",
       },
       {
-        src: "/images/buttermove/profile.jpg",
+        src: "/images/service-platform/profile.jpg",
         text: "Mover profile. Implemented functionality for several editable features.",
       },
       {
-        src: "/images/buttermove/widget.jpg",
+        src: "/images/service-platform/widget.jpg",
         text: "Implemented functionality to generate widget embed code and display preview.",
       },
       {
-        src: "/images/buttermove/estimate.jpg",
+        src: "/images/service-platform/estimate.jpg",
         text: "Created page and form with validation, including address autocompletion using the Google Maps API.",
       },
       {
-        src: "/images/buttermove/invoices.jpg",
+        src: "/images/service-platform/invoices.jpg",
         text: "Created queries for analytics and searchable / filterable table.",
       },
       {
-        src: "/images/buttermove/estimatetoinvoice.jpg",
+        src: "/images/service-platform/estimatetoinvoice.jpg",
         text: "Created queries and functionality for entire page, including logic to determine process stage, related transactions, and related documents. Added buttons and backend functionality to allow mover to add on charges or issue a refund.",
       },
       {
-        src: "/images/buttermove/onboardingops.jpg",
+        src: "/images/service-platform/onboardingops.jpg",
         text: "Implemented connection to Pipedrive API to pull data about leads and calls.",
       },
       {
-        src: "/images/buttermove/forecastedrevenue.jpg",
-        text: "Created all front and backend functionality and calculations for forecasted revenue page. Sample page does not have recent data, but would have cards with details for each mover that signed up for the ButterMove site, along with their stage in the onboarding process.",
+        src: "/images/service-platform/forecastedrevenue.jpg",
+        text: "Created all front and backend functionality and calculations for forecasted revenue page. Sample page does not have recent data, but would have cards with details for each mover that signed up for the site, along with their stage in the onboarding process.",
       },
     ],
     skills: {
