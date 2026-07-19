@@ -187,8 +187,8 @@ export const projects : IProjectItem[] = [
     },
     detailDisplay: "text",
     skills: {
-      front: ["Angular", "TypeScript", "HTML", "CSS"],
-      back: ["C# / .NET", "REST API", "SQL"],
+      front: ["Kendo", "HTML"],
+      back: ["C# / .NET", "REST API", "MS SQL"],
       other: [
         "ArcGIS",
         "Survey123",
